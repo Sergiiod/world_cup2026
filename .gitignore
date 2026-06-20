@@ -1,0 +1,9 @@
+# .gitignore
+venv/
+__pycache__/
+*.pyc
+.env
+*.pkl
+.streamlit/cache
+test.ipynb
+test2.py
