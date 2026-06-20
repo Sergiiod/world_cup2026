@@ -2,6 +2,14 @@ import streamlit as st
 from app.dashboard import show_dashboard
 from app.predictor import show_predictor
 
+import os
+import subprocess
+
+model_path = os.path.join("model", "best_model.pkl")
+if not os.path.exists(model_path):
+    print("Training model...")
+    subprocess.run(["python", "model/train.py"], check=True)
+
 st.set_page_config(
     page_title= 'WC 2026 Analytics',
     page_icon= "⚽",
